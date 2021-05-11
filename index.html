@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+    <title>Кузня Брендов</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header__flex">
+                <div class="header__front_test">
+                    front
+                    <span class="header__front_test_white">_test</span>
+                </div>
+                <div class="header__title">
+                    Тестовое задание
+                </div>
+                <div class="header__subtitle">
+                    Сверстайте эту страницу включая интерактивные элементы.
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main__flex">
+                <div class="main__flex_el">
+                    <div class="main__flex_el_fox">
+                        <div class="main__fox_block">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="main__flex_el">
+                    <div class="main__flex_el_card">
+                        <div id="scene" class="main__card_block" data-hover-only="true" data-relative-input="true">
+                            <div class="card__img" >
+                                <div class="card__img_before" data-depth="0.2">
+                                </div>
+                                <img src="img/infinity.svg" alt="">
+                                <div class="card__img_after"  data-depth="0.8">
+                                </div>
+                            </div>
+                            <div class="card__title">
+                                Интерактивная карточка
+                            </div>
+                            <div class="card__subtitle">
+                                Должна вращаться за мышкой
+                            </div>
+                            <div class="card__btn">
+                                <div class="card__btn_flex">
+                                    <div><img class="card__btn_img" src="./img/formbtn.svg" alt=""></div>
+                                    <div>Кнопка</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__flex">
+                <div class="main__flex_el">
+                    <div class="main__flex_el_form">
+                        <div class="form__title">
+                            Форма
+                        </div>
+                        <div class="form__subtitle">
+                            Дополнительный текст ⏳
+                        </div>
+
+                        <form id="mainForm" action="" method="post">
+                            <div class="form__main">
+                                <div class="form__item_wrapper">
+                                    <label class="form__item_lbl" for="">Выбор чего-то*</label>
+                                    <div class="form__item form__select_wrapper">
+                                        <select class="form__select">
+                                            <option value="" disabled selected hidden>Выбор чего-то*</option>
+                                            <option value="1">Выбор 1</option>
+                                            <option value="2">Выбор 2</option>
+                                            <option value="3">Выбор 3</option>
+                                            <option value="4">Выбор 4</option>
+                                            <option value="5">Выбор 5</option>
+                                        </select>
+                                        <div class="select-arrow"></div>
+                                    </div>
+                                </div>
+                                <div class="form__item_wrapper">
+                                    <div class="form__item phone">
+                                        <label for="form__item_lbl"></label>
+                                        <input class="form__item_phone" placeholder="Номер телефона *" type="text">
+                                    </div>
+                                </div>
+                                <div class="form__item_wrapper">
+                                    <label class="form__item_lbl" for="">Коротко о чем-то еще</label>
+                                    <div class="form__item form__item_textarea">
+                                        <textarea class="form__item_text" placeholder="Коротко о чем-то ещё" type="text"
+                                            required></textarea>
+                                    </div>
+                                </div>
+                                <div class="form__item_wrapper">
+                                    <div class="input__file_wrapper">
+                                        <input type="file" name="files[]" id="input__file" class="input__file" multiple>
+                                        <label for="input__file" class="input__file_btn">
+                                            <span class="input__file_icon_wrapper"><img class="input__file_icon"
+                                                    src="./img/add.svg" alt="Выбрать файл"></span>
+                                            <span class="input__file_btn_text">Прикрепить файл</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                        <div class="form__item_wrapper form__item_btn">
+                            <button id="formBtn" class="form__btn">
+                                <div class="form__btn_flex">
+                                    <div><img class="form__btn_img" src="./img/formbtn.svg" alt=""></div>
+                                    <div>Кнопка</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__flex_el">
+                    <div class="main__flex_el_tabs">
+                        <div class="tabs__item">
+                            <div class="tabs__item_flex">
+                                <div class="tabs__item_counter">
+                                    1
+                                </div>
+                                <div class="tabs__item_text">
+                                    <div class="tabs__item_title">
+                                        Заголовок 1
+                                    </div>
+                                    <div class="tabs__item_subtitle none fadeIn">
+                                        Какой-то текст про очень важные вещи о которых нужно было написать внутри этих
+                                        табов.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__item_arrow">
+                                <img src="img/ arrow.svg" alt="">
+                            </div>
+                            <div class="tabs__item_border"></div>
+                        </div>
+                        <div class="tabs__item">
+                            <div class="tabs__item_flex">
+                                <div class="tabs__item_counter">
+                                    2
+                                </div>
+                                <div class="tabs__item_text">
+                                    <div class="tabs__item_title">
+                                        Заголовок 2
+                                    </div>
+                                    <div class="tabs__item_subtitle none fadeIn">
+                                        Какой-то текст про очень важные вещи о которых нужно было написать внутри этих
+                                        табов.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__item_arrow">
+                                <img src="img/ arrow.svg" alt="">
+                            </div>
+                            <div class="tabs__item_border"></div>
+                        </div>
+                        <div class="tabs__item">
+                            <div class="tabs__item_flex">
+                                <div class="tabs__item_counter">
+                                    3
+                                </div>
+                                <div class="tabs__item_text">
+                                    <div class="tabs__item_title">
+                                        Заголовок 3
+                                    </div>
+                                    <div class="tabs__item_subtitle none fadeIn">
+                                        Какой-то текст про очень важные вещи о которых нужно было написать внутри этих
+                                        табов.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__item_arrow">
+                                <img src="img/ arrow.svg" alt="">
+                            </div>
+                            <div class="tabs__item_border"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(15, window.innerWidth / window.innerHeight, 1, 2000);
+        camera.position.z = 920;
+
+        renderer = new THREE.WebGLRenderer({
+            alpha: true,
+            antialias: true
+        });
+        renderer.setClearColor(0x00000, 0);
+
+        renderer.setSize(1400, 600);
+
+        renderer.domElement.setAttribute("id", "fox");
+        const foxParent = document.querySelector('.main__fox_block');
+        foxParent.insertBefore(renderer.domElement, foxParent.firstChild);
+
+        const aLight = new THREE.AmbientLight(0x404040, 1.2);
+        scene.add(aLight);
+
+        const pLight = new THREE.PointLight(0xFFFFFF, 1.2);
+        pLight.position.set(0, -3, 7);
+        scene.add(pLight);
+
+        // const helper = new THREE.PointLightHelper(pLight);
+        // scene.add(helper);
+
+        let loader = new THREE.GLTFLoader();
+        let obj = null;
+
+        loader.load("3d/fox.gltf", function (gltf) {
+            obj = gltf;
+            obj.scene.scale.set(2.2, 1, 2.3);
+
+            scene.add(obj.scene);
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            if (obj)
+                obj.scene.rotation.y += 0.03;
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        function screenZ() {
+            if (screen.width <= 1000 && screen.width > 750) {
+                camera = new THREE.PerspectiveCamera(15, window.innerWidth / window.innerHeight, 1, 2000);
+                camera.position.z = 1200;
+            } else if (screen.width <= 750 && screen.width > 410) {
+                camera = new THREE.PerspectiveCamera(15, window.innerWidth / window.innerHeight, 1, 3000);
+                camera.position.z = 2000;
+            } else if (screen.width <= 410) {
+                camera = new THREE.PerspectiveCamera(15, window.innerWidth / window.innerHeight, 1, 3000);
+                camera.position.z = 2400;
+            }
+        };
+        screenZ();
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
